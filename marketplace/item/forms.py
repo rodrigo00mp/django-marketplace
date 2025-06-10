@@ -5,5 +5,5 @@ from .models import Item
 class NewItemForm(forms.ModelForm):
   class Meta:
     model = Item
-    fields = ('category', 'name', 'descripiton', 'price', 'image')
+    fields = ('category', 'name', 'description', 'price', 'image')
 
