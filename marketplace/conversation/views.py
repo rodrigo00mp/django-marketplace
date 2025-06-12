@@ -18,7 +18,7 @@ def new_conversation(request, item_pk):
   if request.method == 'POST':
     form = ConversationMessageForm(request.POST)
     if form.is_valid():
-      conversation = Conversation.object.create(item=item)
+      conversation = Conversation.objects.create(item=item)
       conversation.members.add(request.user)
       conversation.members.add(item.created_by)
       conversation.save()
